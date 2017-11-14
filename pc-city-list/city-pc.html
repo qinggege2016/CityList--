@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PC【城市】</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pc-city.css">
+</head>
+<body>
+<input type="text" id='search'>
+<script src='js/jquery-1.10.2.min.js'></script>
+<script src='js/pc-city.js'></script>
+<script>
+    options = {
+        cities: {
+            inner: {
+                'HOT': ['厦门|XM|xiamen', '福州|FOC|fuzhou', '杭州|HZH|hangzhou', '天津|TSN|tianjin', '北京|BJ|beijing'],
+                'C': ['长沙|CS|changsha', '成都|CD|chengdu', '长白山|CBS|changbaishan', '重庆|CQ|chongqing|'],
+                'D': ['大连|DL|dalian'],
+                'F': ['福州|FZ|fuzhou'],
+                'B': ['北海|BH|beihai', '百色|BS|baise'],
+                'G': ['广州|GZ|guangzhou', '桂林|GL|guilin'],
+                'H': ['海口|HK|haikou', '哈尔滨|HRB|haerbin', '淮安|HA|huaian'],
+                'X': ['厦门|XM|xiamen']
+            },
+            outer: {
+                'HOT': ['齐齐哈尔|qiqihaer|qqhe', '石家庄|shijiazhuang|sjz', '沈阳|shenyang|sy', '思茅|simao|sm'],
+                'A': ['澳门|AM|aomen', '爱丁堡|ADB|aidingbao'],
+                'B': ['巴厘岛|BLD|balidao', '巴塞罗那|BSLN|basailuona', '巴黎|BL|bali'],
+                'D': ['大阪|DB|daban', '东京|DJ|dongjing']
+            }
+        },
+        isKeyselect: true
+
+    };
+    $("#search").listCity(options);
+
+//    $.ajax({
+//        type : "POST",
+//        url : "http://172.16.68.201:8080/fare/getCityAirportInfo",
+//        data : {
+//            method: "airportList"
+//        },
+//        datatype: 'json',
+//        success : function(data){
+//            console.log(JSON.parse(data));
+//        }
+//    });
+</script>
+</body>
+</html>

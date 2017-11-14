@@ -1,0 +1,189 @@
+body {
+    font-family: "Microsoft Yahei";
+}
+
+.citybox {
+    position: absolute;
+}
+
+.citybox:after, .citybox:before {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.citybox .cityPanel {
+    position: relative;
+    width: 500px;
+    padding-bottom: 20px;
+    font-size: 12px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px #ccc solid;
+    box-shadow: 3px 3px 3px #ccc;
+    z-index: 999;
+}
+
+.citybox .cityPanel .tips {
+    height: 24px;
+    line-height: 24px;
+    padding: 0 10px;
+    color: #aaa;
+}
+
+.citybox .cityPanel .close {
+    position: absolute;
+    font-size: 13px;
+    color: #888;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.citybox .cityPanel .type ul {
+    width: 100%;
+    background-color: #f39800;
+    padding: 5px 20px;
+    height: 33px;
+    line-height: 28px;
+}
+
+.citybox .cityPanel .type li {
+    float: left;
+    padding: 0 15px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.citybox .cityPanel .type li.active {
+    background-color: #ffffff;
+    color: #777;
+}
+
+.citybox .cityPanel .regional {
+    display: none;
+}
+
+.citybox .cityPanel .regional .title ul:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.citybox .cityPanel .regional .title {
+    margin: 10px;
+    height: 22px;
+}
+
+.citybox .cityPanel .regional .title li {
+    float: left;
+    width: 16.6%;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    border-bottom: 2px solid #ddd;
+    cursor: pointer;
+}
+
+.citybox .cityPanel .regional .title li.active {
+    border-bottom: 2px solid #f39800;
+    color: #f39800;
+}
+
+.citybox .cityPanel .regional .title li:hover {
+    color: #f3ce23;
+}
+
+.citybox .cityPanel .regional .body .city_body {
+    display: none;
+    margin-bottom: 10px;
+    max-height: 170px;
+    overflow: auto;
+}
+
+.citybox .cityPanel .regional .body .city_body.active {
+    display: block;
+}
+
+.citybox .cityPanel .regional .body {
+    padding: 0 10px;
+}
+
+.citybox .cityPanel .regional .body .city_body .letter {
+    position: relative;
+    padding-left: 40px;
+}
+
+.citybox .cityPanel .regional .body .city_body .letter i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #f60;
+}
+
+.citybox .cityPanel .regional .body .city_body li {
+    float: left;
+    width: 63px;
+    text-align: center;
+    display: block;
+    height: 22px;
+    line-height: 22px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*padding: 2px 2px 2px 5px;*/
+    cursor: pointer;
+}
+
+.citybox .cityPanel .regional .body .city_body li:hover {
+    background: #f39800;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.citybox {
+    width: 300px;
+}
+
+.citybox .citylist{
+    max-height: 300px;
+    overflow: auto;
+}
+
+.citybox .citylist li {
+    position: relative;
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+    background: rgba(221, 221, 221, 0.3);
+    border-bottom: 1px solid #efefef;
+    cursor: pointer;
+}
+
+.citybox .citylist li:hover {
+    background: #fefefe;
+}
+
+.citybox .citylist li.active {
+    background: #96d2ff;
+}
+
+.citybox .citylist li span.cityname {
+    position: absolute;
+    left: 15px;
+}
+
+.citybox .citylist li span.cityalpha {
+    position: absolute;
+    right: 15px;
+}
+
+.citybox .citylist li span.citycode {
+    display: none;
+}
